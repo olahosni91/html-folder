@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        *{margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        h3{padding-top: 20px; padding-bottom: 10px;}
+        header a:hover {
+            background-color: rgb(189, 75, 75);
+            color: black;}
+        header{
+                background-color: #333;
+                overflow: hidden;
+                text-align: center;
+            }
+        header a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+        .parent{display: flex;}
+        .third-page
+        {
+            outline-style: solid;
+            outline-color: rgb(149, 159, 161);
+            background-color: rgb(220, 226, 228);
+        }
+        .red-color{
+            color: red;
+        }
+        .white-outline{
+            outline-color:  rgb(163, 190, 195);
+        }
+        .white-color{
+            background-color: rgb(241, 244, 245);
+        }
+        .buttons{
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px; 
+            background-color: rgb(149, 159, 161);
+        }
+        .inputs{
+            width: 60%; 
+            margin-left: 20px; 
+            border: none;
+        }
+        .input-div{
+            display: flex; 
+            padding-bottom: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="Home.html">Home</a>
+            <a href="RoadMap.html">Road Map</a>
+            <a href="Form.html">Registration Form</a>
+            <a href="https://www.iti.gov.eg/iti/home">Contact</a>
+            <img style="width: 20%; height:8%; float: right;" src="img/ITI_logo.png">
+        </header> 
+        <div  >
+            <div style="margin: auto; width: 60%; padding: 10px; margin-top: 20px;" class="third-page">
+                <h2 style="color: rgb(27, 102, 114);">Register - Create Account</h2>
+                <div class="white-outline" style="margin:10px 0px; padding: 0px 5px; outline-style: dashed; "><p>Field marked with <span class="red-color">*</span> are compulsory fields</p></div>
+                <form action="process.php" method="POST">
+                <div class="input-div">
+                   
+                    <p style="width: 20%;"><span class="red-color">*</span> Your Name</p>
+                    <input class="white-color inputs" type="text" name="name" required>
+                </div>
+
+                <div class="input-div">
+                    <p style="width: 20%;"><span class="red-color">*</span> E-mail ID</p>
+                    <input class="white-color inputs" type="email" name="mail" required>
+
+                </div>
+                <div class="input-div">
+                    <p style="width: 20%;"> Alternative E-mail ID</p>
+                    <input class="white-color inputs"  type="text" name="name" required>
+     
+                </div>
+                <div class="input-div">
+                    <p style="width: 20%;"> Your Phone</p>
+                    <div style="width: 60%;margin-left: 2%;">
+                    <label>Country Code  -  City Code  -  Phone Number</label>
+                    <div><input class="white-color" style="width:10%;margin:0px 15px 5px; border: none;" type="number" ><input style="width: 10%;margin:0px 15px 5px 45px; border: none; background-color: rgb(241, 244, 245);" type="number"><input style="width: 30%; border: none; margin: 0px 5px 15px 15px; background-color: rgb(241, 244, 245);" type="number"></div>
+                        <!-- <div><label>Country</label><input style="width: 20%;"  type="number"></div>
+                    <div><label>City</label><input style="width: 50%;" type="number"></div>
+                    <div><label>Phone Number</label><input style="width: 50%;" type="number"></div>-->
+                </div>
+
+                </div>
+                <div class="input-div">
+                    <p style="width: 20%;"> Mobile Phone</p>
+                    <input class="white-color inputs"  type="number" name="mobile" required>
+                </div>
+                <div style="display: flex; padding-bottom: 10px;">
+                    <p style="width: 20%;"><span class="red-color">*</span> Postal Address</p>
+                    <textarea class="white-color inputs" required> </textarea>
+                
+                </div>
+                <div style="display: flex; padding-bottom: 10px;">
+                    <p style="width: 20%;"><span class="red-color">*</span> Country</p>
+                    <select class="white-color" style="width: 60%; margin-left: 20px;  border: none;" type="text" required>
+                    <option value="select" disabled selected>-----Select One-----</option>
+                    <option>Egypt</option>
+                    <option>Syria</option>
+                    <option>America</option>
+                    </select>
+                
+                </div>
+                <div style="display: flex; padding-bottom: 10px;">
+                    <p style="width: 20%;"><span class="red-color">*</span>Password</p>
+                    <input class="white-color inputs" type="Password" name="Password" required> 
+                 </div>
+                 <div style="display: flex; padding-bottom: 10px;">
+                    <p style="width: 20%;"><span class="red-color">*</span>Re-Enter Password</p>
+                    <input class="white-class inputs"  type="Password" name="Password" required> 
+                 </div>
+                 <div style="display: flex; padding-bottom: 10px;">
+                    <div style="width: 20%;"></div>
+                    <p style="color: rgb(61, 60, 60);"><input type="checkbox" ><b> I accept the &nbsp;</p><span style="color:blue;text-decoration: underline;">terms of use</span></b>
+                </div>
+                <div style="display: flex;">
+                    <div style="width: 20%;"></div>
+                    <div style="width: 60%;">
+                <button class="buttons"><a style="text-decoration: none; color:black" href="https://www.iti.gov.eg/iti/home">Continue >></a></button>
+                <input  class="buttons" type="reset" value="Reset">
+            </div>
+            </div>
+
+            </div>
+            </div>
+        </form>
+
+        </div>
+        <footer style="padding: 10px;">
+            <hr>
+            <h4 style="text-align: center; padding: 30px; ">Copyright 2022 by Noha Salah &reg;. All Rights Reserved.</h4>
+            <hr>
+        </footer>
+
+
+    </body>
+
+
+</html>
